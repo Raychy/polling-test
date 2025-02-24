@@ -37,7 +37,7 @@ This is a simple Vue 3 poll where users can vote for their favorite frontend fra
 
 ## File Structure
 ```
-vue-poll/
+polling-test/
 │-- src/
 │   │-- components/
 │   │   ├── Poll.vue  # The main poll component (TypeScript)
