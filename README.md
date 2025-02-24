@@ -53,6 +53,4 @@ polling-test/
 - Modify the `choices` array to add or remove voting options.
 - Adjust CSS styles to fit your design needs.
 
-## Contributing
-If you would like to contribute, feel free to fork the repository and submit a pull request!
 
