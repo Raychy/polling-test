@@ -40,10 +40,10 @@ import { ref } from "vue";
 
 const question = ref("Which frontend framework do you prefer?");
 const choices = ref([
-  { label: "Vue", votes: 100 },
-  { label: "React", votes: 40 },
-  { label: "Angular", votes: 20 },
-  { label: "Svelte", votes: 60 },
+  { label: "Vue", votes: 150 },
+  { label: "React", votes: 80 },
+  { label: "Angular", votes: 40 },
+  { label: "Svelte", votes: 10 },
 ]);
 const totalVotes = ref<number>(choices.value.reduce((sum, choice) => sum + choice.votes, 0));
 const hasVoted = ref(false);
