@@ -1,20 +1,20 @@
-.poll-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+body{
   height: 100vh;
   background: #f0f0f0;
+  margin: 0;
 }
 
 .poll {
-  width: 500px;
+  width: 600px;
   max-width: 90%;
   padding: 20px;
   background: #ffffff;
   border-radius: 12px;
+  margin: auto;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   text-align: left;
   font-family: Arial, sans-serif;
+  margin-top: 20rem;
 }
 .poll-choices .choice-button {
   display: flex;
@@ -80,4 +80,9 @@
 .vote-count {
   font-size: 14px;
   color: #555;
+}
+@media screen and (max-width:  640px) {
+  .poll {
+    margin-top: 10rem;
+  }
 }
