@@ -88,7 +88,7 @@ body{
   color: #333;
 }
 @media screen and (max-width:  640px) {
-  .poll {
+  .poll-container {
     margin-top: 10rem;
   }
 }
