@@ -1,39 +1,38 @@
 <template>
-  <section class="poll-container">
-    <div class="poll">
-      <h2>{{ question }}</h2>
-      <section v-if="!hasVoted" class="poll-choices">
-        <button
-          v-for="(choice, index) in choices"
-          :key="index"
-          @click="castVote(index)"
-          class="choice-button"
-        >
-          <span class="checkmark" v-if="selectedIndex === index">✔</span>
-          {{ choice.label }}
-        </button>
-      </section>
-      <section v-else class="poll-results">
-        <div
-          v-for="(choice, index) in choices"
-          :key="index"
-          class="result"
-          :class="{ selected: selectedIndex === index }"
-        >
-          <span class="label">{{ choice.label }}</span>
-          <div class="progress-container">
-            <div
-              class="progress"
-              :style="{ width: (choice.votes / totalVotes) * 100 + '%' }"
-            ></div>
-          </div>
-          <span class="vote-count"
-            >{{ ((choice.votes / totalVotes) * 100).toFixed(0) }}%</span
-          >
+  <main class="poll-container">
+    <h2>{{ question }}</h2>
+    <section v-if="!hasVoted" class="poll-choices">
+      <button
+        v-for="(choice, index) in choices"
+        :key="index"
+        @click="castVote(index)"
+        class="choice-button"
+      >
+        <span class="checkmark" v-if="selectedIndex === index">✔</span>
+        {{ choice.label }}
+      </button>
+    </section>
+    <section v-else class="poll-results">
+      <div
+        v-for="(choice, index) in choices"
+        :key="index"
+        class="result"
+        :class="{ selected: selectedIndex === index }"
+      >
+        <span class="label">{{ choice.label }}</span>
+        <div class="progress-container">
+          <div
+            class="progress"
+            :style="{ width: (choice.votes / totalVotes) * 100 + '%' }"
+          ></div>
         </div>
-      </section>
-    </div>
-  </section>
+        <span class="vote-count"
+          >{{ ((choice.votes / totalVotes) * 100).toFixed(0) }}%</span
+        >
+      </div>
+      <p class="total-votes">Total Votes: {{ totalVotes }}</p>
+    </section>
+  </main>
 </template>
 
 <script setup lang="ts">
