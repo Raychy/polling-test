@@ -6,7 +6,7 @@ This is a simple Vue 3 poll where users can vote for their favorite frontend fra
 - Display a poll question with four answer options
 - Users can vote by clicking an option
 - Show vote percentages after voting
-- Smooth animation for result display
+- Show total votes
 
 ## Technologies Used
 - Vue 3 (Composition API)
