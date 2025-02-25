@@ -14,7 +14,7 @@ body{
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   text-align: left;
   font-family: Arial, sans-serif;
-  margin-top: 20rem;
+  margin-top: 10rem;
 }
 .poll-choices .choice-button {
   display: flex;
